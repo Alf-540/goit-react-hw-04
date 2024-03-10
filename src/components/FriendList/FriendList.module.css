@@ -1,3 +1,5 @@
+ul {    padding-inline-start: 0px;
+}
 .friendsList {
    list-style: none;
     display: flex;
