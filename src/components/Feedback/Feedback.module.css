@@ -28,22 +28,13 @@
     margin-bottom: 20px;
 }
 
-.statList {
-    display: flex;
-    background-color: rgb(185, 185, 185);
+.list {
     margin: 0px;
     padding: 0px;
 }
 
-.statItem {
+.item {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-basis: calc(100% / 3) ;
-        padding-top: 25px;
-        padding-bottom: 25px;
-    border-right: 4px solid rgb(147, 147, 147);
-    border-top: 4px solid rgb(147, 147, 147);
 }
 
 .statType {
