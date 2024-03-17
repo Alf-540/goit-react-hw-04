@@ -3,6 +3,7 @@ import './App.css';
 import Description from './components/Description/Description.jsx';
 import Options from './components/Options/Options.jsx';
 import Feedback from './components/Feedback/Feedback.jsx';
+import Notification from './components/Notification/Notification.jsx';
 
 function App() {
   const initialFeedback = {
@@ -51,11 +52,15 @@ function App() {
         totalFeedback={totalFeedback}
         updateTotal={updateTotal}
       />
-      <Feedback
-        types={types}
-        totalFeedback={totalFeedback}
-        positiveStatistics={positiveStatistics}
-      />
+      {totalFeedback <= 0 ? (
+        <Notification />
+      ) : (
+        <Feedback
+          types={types}
+          totalFeedback={totalFeedback}
+          positiveStatistics={positiveStatistics}
+        />
+      )}
     </>
   );
 }
