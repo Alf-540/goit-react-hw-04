@@ -5,16 +5,17 @@ import Options from './components/Options/Options.jsx';
 import Feedback from './components/Feedback/Feedback.jsx';
 
 function App() {
+  const initialFeedback = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
   const [types, setTypes] = useState(() => {
     const savedTypes = window.localStorage.getItem('saved-types');
     if (savedTypes) {
       return JSON.parse(savedTypes);
     }
-    return {
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    };
+    return initialFeedback;
   });
 
   useEffect(() => {
