@@ -1,19 +1,21 @@
 import css from './Feedback.module.css';
-import Options from '../Options/Options';
 
-const Feedback = Options => {
+const Feedback = ({ types, totalFeedback, positiveStatistics }) => {
   return (
     <>
-      <ul className={css.list}>
-        {/* {totalFeedback === 0 && (
-          <p className={css.notificationText}>No feedback yet</p>
-        )} */}
-        <li className={css.item}>Good: {}</li>
-        <li className={css.item}>Neutral:{}</li>
-        <li className={css.item}>Bad:{}</li>
-        {Options.totalFeedback > 0(<li>Total: {}</li>)}
-      </ul>
+      {totalFeedback > 0 ? (
+        <ul className={css.list}>
+          <li className={css.item}>Good: {types.good}</li>
+          <li className={css.item}>Neutral: {types.neutral}</li>
+          <li className={css.item}>Bad: {types.bad}</li>
+          <li className={css.item}>Total: {totalFeedback}</li>
+          <li className={css.item}>Positive: {positiveStatistics}%</li>
+        </ul>
+      ) : (
+        <p>No feedback yet</p>
+      )}
     </>
   );
 };
-// export default Feedback;
+
+export default Feedback;
