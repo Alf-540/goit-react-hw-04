@@ -2,24 +2,25 @@ import { useState } from 'react';
 import './App.css';
 import Description from './components/Description/Description.jsx';
 import Options from './components/Options/Options.jsx';
-import Feedback from './components/Feedback/Feedback.jsx';
+// import Feedback from './components/Feedback/Feedback.jsx';
 
+const feedbacks = {
+  good: 0,
+  neutral: 0,
+  bad: 0,
+};
 
-function App({
-	good= 0,
-	neutral= 0,
-	bad= 0
-}) {
+function App() {
   const [clicks, setClicks] = useState(0);
 
-	const handleClick = () => {
+  const handleClick = () => {
     setClicks(clicks + 1);
   };
-    return (
+  return (
     <>
-    <Description/>
-    <Options/>
-    <Feedback/>
+      <Description />
+      <Options />
+      {/* <Feedback /> */}
     </>
   );
 }

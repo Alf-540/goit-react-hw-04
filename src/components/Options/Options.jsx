@@ -1,24 +1,22 @@
 import css from './Options.module.css';
 
-const Options = () => {
+const Options = ({ updateFeedback, totalFeedback, updateTotal }) => {
   return (
     <>
-      <button onClick={() => console.log('Click!')} className={css.button}>
+      <button className={css.button} onClick={() => updateFeedback('good')}>
         Good
       </button>
-      <button onClick={() => console.log('Click!')} className={css.button}>
+      <button className={css.button} onClick={() => updateFeedback('neutral')}>
         Neutral
       </button>
-      <button onClick={() => console.log('Click!')} className={css.button}>
+      <button className={css.button} onClick={() => updateFeedback('bad')}>
         Bad
       </button>
-      {/* {
-        (onClick = true ? (
-          <button onClick={() => console.log('Click!')} className={css.button}>
-            Reset
-          </button>
-        ) : null)
-      } */}
+      {totalFeedback > 0 && (
+        <button className={css.button} onClick={() => updateTotal()}>
+          Reset
+        </button>
+      )}
     </>
   );
 };
