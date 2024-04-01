@@ -2,7 +2,9 @@ import ContactList from './components/ContactList/ContactList.jsx';
 import initialContacts from './../Phonebook.json';
 import ContactForm from './components/ContactForm/ContactForm.jsx';
 import SearchBox from './components/SearchBox/SearchBox.jsx';
+
 import css from './App.module.css';
+
 import { useState } from 'react';
 
 export default function App() {
