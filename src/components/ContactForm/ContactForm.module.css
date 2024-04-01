@@ -1,15 +1,19 @@
 .form {
     display: flex ;
-    gap: 4px;
-    border: 3px;
+    flex-direction: column;
+    gap: 10px;
+    border-width: 3px;
     border-color: black;
-}
+    }
 
 .field {
     font: inherit;
     padding: 4px;
+    border-radius: 3px;
 }
 
 .btn {
     background-color: rgb(216, 216, 216);
+    width: fit-content;
+    margin: auto;
 }

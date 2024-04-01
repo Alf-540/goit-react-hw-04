@@ -3,11 +3,7 @@ import css from './Contact.module.css';
 import { FaPhone } from 'react-icons/fa6';
 import { FaUserLarge } from 'react-icons/fa6';
 
-import { useId } from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-
-export default function Contact({ data: { id, name, number }, onDelete }) {
+export default function Contact({ name, number, id, onDelete }) {
   return (
     <div className={css.container}>
       <p className={css.text}>

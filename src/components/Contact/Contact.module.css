@@ -3,9 +3,11 @@
     border-radius: 4px;
     padding: 4px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
     justify-content: space-between;
     gap: 12px;
+    
 }
 
 .icon {
@@ -19,5 +21,6 @@ color: black;
 }
 
 .btn {
+    margin: auto;
     background-color: rgb(216, 216, 216);
 }
