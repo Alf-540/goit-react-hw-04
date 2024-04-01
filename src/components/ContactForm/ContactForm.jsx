@@ -13,9 +13,13 @@ export default function ContactForm({ onAdd }) {
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
+      <p className={css.label}>Name</p>
       <input className={css.field} type="text" name="name" />
+      <p className={css.label}>Number</p>
       <input className={css.field} type="text" name="number" />
-      <button type="submit">Add contact</button>
+      <button className={css.btn} type="submit">
+        Add contact
+      </button>
     </form>
   );
 }

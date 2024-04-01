@@ -11,3 +11,7 @@
 .text {
     margin: 0;
 }
+
+.btn {
+    background-color: rgb(216, 216, 216);
+}
