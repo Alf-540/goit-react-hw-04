@@ -1,15 +1,14 @@
 .search {
-    background-color: #646cff;
-    margin-bottom: 20px;
-}
+    background-color: #575fd4;
+    padding-top: 8px;
+    padding-bottom: 8px;}
 
 .form {
     position: relative;
-    margin: 0 auto;
+    margin:  auto;
     height: 48px;
     max-width: 400px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    
 }
 
 .input {
